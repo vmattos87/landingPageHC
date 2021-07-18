@@ -1,0 +1,270 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <title>Test Six</title>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css" />
+    <!-- Google Fonts Roboto -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" />
+    <!-- MDB -->
+    <link rel="stylesheet" href="css/mdb.min.css" />
+    <!-- Custom styles -->
+    <link rel="stylesheet" href="css/style.css" />
+
+    <!--Datetime-->
+    <link rel="stylesheet" href="css/date.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-datetimepicker/2.5.4/jquery.datetimepicker.min.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!--End Datetime-->
+</head>
+<body>
+    <!--Main Navigation-->
+<header>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark d-none d-lg-block" style="z-index: 2000;">
+    <div class="container-fluid">
+      <!-- Navbar brand -->
+      <a class="navbar-brand nav-link" target="_blank" href="index.html">
+        <strong>TimeTrip</strong>
+      </a>
+      
+      <!-- Collapse button -->
+      <button
+      class="navbar-toggler"
+      type="button"
+      data-mdb-toggle="collapse"
+      data-mdb-target="#navbarNav"
+      aria-controls="navbarNav"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <i class="fas fa-bars"></i>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarNav">
+
+      <!-- Links -->
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="#">Hospedagens
+            <span class="sr-only">(current)</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Pacotes</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Ofertas</a>
+        </li>
+
+      </ul>
+      <!-- Links -->
+      
+    </div>
+    <!-- Collapsible content -->  
+    </div>
+  </nav>
+  <!-- Navbar -->
+
+  <!-- Carousel wrapper -->
+  <div id="introCarousel" class="carousel slide carousel-fade " data-mdb-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+      <li data-mdb-target="#introCarousel" data-mdb-slide-to="0" class="active"></li>
+      <li id = "step2" data-mdb-target="#introCarousel" data-mdb-slide-to="1"></li>
+      <li id = "step3" data-mdb-target="#introCarousel" data-mdb-slide-to="2"></li>
+    </ol>
+
+    <!-- Inner -->
+    <div class="carousel-inner">
+
+
+      <!-- 1- Single item -->
+      <div class="carousel-item active">
+        
+        <div id="intro" class="view">
+          <div class="mask" style="background-color: rgba(0, 0, 0, 0.2);">
+            <div class="d-flex justify-content-center align-items-center h-100">
+              <div class="text-white px-4 trip">
+                <h1 class="mb-3">Sua viagem, pertinho de você!</h1>
+    
+                <!-- Time Counter -->                
+                <!-- <h3 id="time-counter" class="border border-light my-4 p-4"></h3> --> 
+                
+                <input id="destination" type="text" class="transinput border border-light my-4 p-4 text-white px-4" placeholder="Quero viajar para...">
+                
+                <!--Date Test-->
+                <div class="col-md-6 gx-5 mb-4 datecontainer">
+                      <form>
+                          <div class="form-outline mb-4 datepick">
+                              <div id="go" class="form-outline">
+                                <input id="datetimepicker" type="text" class="form-control text-white" size="12">
+                                <label id= "lblDepart" class="form-label text-white" for="datetimepicker">Data de ida</label>
+                            </div>
+                            <div id="back" class="form-outline">
+                                <input id="datetimepicker2" type="text" class="form-control text-white" size="12">
+                                <label id="lblReturn" class="form-label text-white" for="datetimepicker2">Data de volta</label>
+                              </div>
+                              
+                          </div>
+                      </form>
+                </div>
+                <!--Date Test-->
+
+                <div class="text-white text-center">
+                <a id="btn1" class="btn btn-outline-light btn-lg m-2" href="#introCarousel" role="button" data-mdb-slide="next" onclick="showStep2()">Reservar minha vaga</a>
+                </div>
+                  <p style="text-align: center">Encontramos os melhores preços nos melhores hotéis para você.</p>
+    
+                  <p style="text-align: center">Reserve agora com <b>25%</b> de desconto.</p>
+              </div>
+              
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+
+      <!-- 2- Single item -->
+      <div class="carousel-item">
+
+        <div id="intro" class="view">
+          <div class="mask" style="background-color: rgba(0, 0, 0, 0.6);">
+            <div class="d-flex justify-content-center align-items-center h-100">
+              <div class="text-white text-center trip">
+                <h1 class="mb-3">Agora conte seu nome pra gente.</h1>
+    
+                <!-- Time Counter -->                
+                <!-- <h3 id="time-counter" class="border border-light my-4 p-4"></h3> --> 
+                
+                <input id="name" name="name" type="text" class="userinput border border-light my-4 p-4 text-white px-4" placeholder="Meu nome é...">
+                <input id="email" name="email" type="text" class="userinput border border-light my-4 p-4 text-white px-4" placeholder="E-mail">
+                
+  
+                <!--<a class="btn btn-outline-light btn-lg m-2" href="https://www.youtube.com/watch?v=c9B4TPnak1A" role="button"
+                  rel="nofollow" target="_blank">Receber ofertas</a>-->
+                  <div class="text-white text-center">
+                      <a id="btn2" class="btn btn-outline-light btn-lg m-2"
+                      href="#introCarousel" role="button">Receber ofertas</a>
+                  </div>
+                  <p style="text-align: center">Viva uma experiência inesquecível.</p>    
+                  
+              </div>              
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+
+
+      <!-- 3- Single item -->
+      <div class="carousel-item">
+        
+            <div class="view">
+              <!--Video source-->
+              <video class="video-fluid" autoplay loop muted>
+                <source src="src/video/waves.mp4" type="video/mp4" />
+              </video>
+              
+              <div class="mask rgba-indigo-light"></div>
+            </div>
+            <!--Caption-->
+            <div class="carousel-caption text-center">
+              <div class="text-white text-center">
+                <h1 class="h1-responsive">Pronto! Já preparou as malas?</h1>
+                <h3>Estamos enviando os melhores pacotes pra você.</h3>
+              </div>
+            </div>
+            <!--Caption-->      
+      </div>
+    </div>
+    <!-- Inner -->
+
+    <!-- Controls -->
+    
+  </div>
+  <!-- Carousel wrapper -->
+</header>
+<!--Main Navigation-->
+
+    <!-- MDB -->
+    <script type="text/javascript" src="js/mdb.min.js"></script>
+    <!-- Custom scripts -->
+    <script type="text/javascript" src="js/script.js"></script>
+
+    <!--Datetime Scripts-->
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-datetimepicker/2.5.4/build/jquery.datetimepicker.full.min.js"></script>
+    <script src="http://cdn.craig.is/js/rainbow-custom.min.js"></script>
+
+    <script type="text/javascript">
+          $(document).ready(function() {
+            $.datetimepicker.setLocale('pt-BR');
+            $('#datetimepicker').datetimepicker();
+            $('#datetimepicker2').datetimepicker();
+          });
+    </script>
+    <!--End of Datetime Scripts-->
+
+    <script>
+      window.onload = (event) => {
+        $('.carousel').carousel('pause')
+      };
+
+      //validates e-mail and stores user info in Local Storage
+      document.getElementById("btn2").addEventListener('click', function(e){
+        const email = document.getElementById("email").value
+          
+          if (email!= ""){
+            if (/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/.test(email))
+            {
+              showStep3()
+              document.getElementById("step3").click()
+              store()
+              showStorage()
+              return (true)
+            } 
+            else
+            {
+              e.preventDefault()
+              e.stopImmediatePropagation()
+              alert("Por favor, informe um e-mail válido.")
+              
+              return (false)
+            }
+          }
+      })
+
+      function showStep2(){
+        document.getElementById("step2").style.visibility = "visible";
+      }
+
+      function showStep3(){
+        document.getElementById("step3").style.visibility = "visible";
+      }
+
+      function store(){        
+        const person = {
+            name: document.getElementById("name").value,
+            email: document.getElementById("email").value,
+            destination: document.getElementById("destination").value
+        }
+
+        window.localStorage.setItem('customer', JSON.stringify(person))
+      }
+
+      function showStorage(){
+        st = JSON.parse(localStorage.getItem('customer')) 
+        console.log(st)
+      }
+     </script>
+    
+</body>
+</html>
+

@@ -1,0 +1,153 @@
+/* Carousel styling */
+#introCarousel,
+.carousel-inner,
+.carousel-item,
+.carousel-item.active {
+  height: 100vh;
+}
+
+html,
+body,
+header,
+#intro {
+  height: 100%;
+}
+
+.carousel-item:nth-child(1) {
+  background: url("https://mdbootstrap.com/img/Photos/Horizontal/Nature/full%20page/img%20%283%29.jpg")
+    no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.carousel-item:nth-child(2) {
+  background: url("https://images.unsplash.com/photo-1600670942298-b10325b17dea?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1934&q=80")
+    no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.carousel-item:nth-child(3) {
+  background: url("https://mdbootstrap.com/img/Photos/Horizontal/Nature/full%20page/img%20%283%29.jpg")
+    no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+/* Height for devices larger than 576px */
+@media (min-width: 992px) {
+  #introCarousel {
+    margin-top: -58.59px;
+  }
+}
+
+#intro {
+  align-items: center;
+  justify-content: center;
+}
+.navbar {
+  color: aliceblue;
+  font-weight: 600;
+}
+
+.trip {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.trip2 {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+.mb-3 {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+::placeholder {
+  color: #fff;
+  font-size: calc(1.3rem + 0.6vw);
+  opacity: 0.6;
+}
+
+.h3 {
+  max-width: inherit;
+}
+.transinput {
+  background-color: rgba(0, 0, 0, 0) !important;
+  display: block;
+  font-family: var(--mdb-font-sans-serif);
+  font-size: calc(1.3rem + 0.6vw);
+  font-weight: 500;
+  line-height: 1.2;
+}
+
+.transinput:focus::placeholder {
+  color: transparent;
+}
+
+.userinput {
+  background-color: rgba(0, 0, 0, 0) !important;
+  display: block;
+  font-family: var(--mdb-font-sans-serif);
+  font-size: calc(1.3rem + 0.6vw);
+  font-weight: 500;
+  line-height: 1.2;
+  height: 5vh;
+}
+
+.userinput:focus::placeholder {
+  color: transparent;
+}
+
+.datediv {
+  display: flex;
+  justify-content: space-between;
+}
+
+.datepick {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#go {
+  color: #fff;
+  margin-left: 5vh;
+  min-width: 153px;
+}
+
+#back {
+  color: #fff;
+  position: absolute;
+  right: inherit;
+  left: 35vh;
+  min-width: 153px;
+}
+
+.form-label {
+  color: #fff;
+  opacity: 0.6;
+}
+
+.datecontainer {
+  position: relative;
+  min-width: inherit;
+}
+
+#step2,
+#step3 {
+  visibility: hidden;
+}
